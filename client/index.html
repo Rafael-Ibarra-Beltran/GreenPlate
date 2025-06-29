@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/index-inline.css">
+    <title>GreenPlate</title>
+</head>
+<body>
+    <header>
+        <div id="logotipo">
+            <img src="./images/logotipo.webp" alt="Logotipo de GreenPlate" id="logotipo">
+            <h1 class="fuente-titulo">GreenPlate</h1>
+        </div>
+        <input type="checkbox" id="menu-toggle" class="menu-toggle-checkbox">
+        <label for="menu-toggle" class="menu-toggle-label">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <nav id="menu">
+            <ul>
+                <li><a href="#hero" class="fuente-titulo">Inicio</a></li>
+                <li><a href="#platillos-destacados" class="fuente-titulo">Platillos</a></li>
+                <li><a href="#sobre-nosotros" class="fuente-titulo">Nosotros</a></li>
+                <li><a href="#resenas" class="fuente-titulo">Reseñas</a></li>
+                <li><a href="#contacto" class="boton-contacto fuente-titulo">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="hero">
+        <img src="./images/hero.webp" alt="Comida vegana" id="hero-imagen">
+        <div id="hero-descripcion">
+            <h3 class="fuente-titulo">GreenPlate</h3>
+            <h1 class="fuente-titulo">El mejor sabor vegano en la ciudad</h1>
+            <p class="fuente-cuerpo">Bienvenidos a GreenPlate, donde transformamos tus antojos en una experiencia única. Nuestras hamburguesas veganas están hechas con los mejores ingredientes frescos, sin comprometer el sabor ni el bienestar, y se sirven en panecillos recién horneados.</p>
+        </div>
+    </section>
+
+    <section id="platillos-destacados">
+        <h2 class="fuente-titulo">Platillos Destacados</h2>
+        <div class="divisor"></div> 
+        <p class="fuente-cuerpo">Descubre nuestra selección de platillos veganos más populares, preparados con ingredientes frescos y llenos de sabor. ¡Una experiencia culinaria que no te puedes perder!</p>
+
+        <div id="platillos-columnas-contenedor">
+            <div id="platillos-columna-izquierda"></div>
+            <div id="platillos-columna-derecha"></div>
+        </div>
+    </section>
+
+    <section id="informacion-nutricional">
+        <h2 class="fuente-titulo">Información Nutricional</h2>
+        <div class="divisor"></div>
+        <p class="fuente-cuerpo">En GreenPlate nos preocupamos por tu bienestar. Conoce los valores nutricionales de nuestros platillos destacados para que puedas disfrutar de una alimentación consciente y equilibrada.</p>
+        
+        <div class="contenedor-tabla-nutricional">
+            <table>
+                <thead>
+                    <tr>
+                        <th class="fuente-titulo">Platillo</th>
+                        <th class="fuente-titulo">Calorías</th>
+                        <th class="fuente-titulo">Proteínas</th>
+                        <th class="fuente-titulo">Carbohidratos</th>
+                        <th class="fuente-titulo">Grasas</th>
+                        <th class="fuente-titulo">Fibra</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="fuente-cuerpo">Hamburguesa Vegana Clásica</td>
+                        <td class="fuente-cuerpo">420 kcal</td>
+                        <td class="fuente-cuerpo">15g</td>
+                        <td class="fuente-cuerpo">52g</td>
+                        <td class="fuente-cuerpo">18g</td>
+                        <td class="fuente-cuerpo">8g</td>
+                    </tr>
+                    <tr>
+                        <td class="fuente-cuerpo">Tacos Veganos al Pastor (2 unidades)</td>
+                        <td class="fuente-cuerpo">380 kcal</td>
+                        <td class="fuente-cuerpo">12g</td>
+                        <td class="fuente-cuerpo">48g</td>
+                        <td class="fuente-cuerpo">14g</td>
+                        <td class="fuente-cuerpo">6g</td>
+                    </tr>
+                    <tr>
+                        <td class="fuente-cuerpo">Ensalada Mediterránea de Garbanzos</td>
+                        <td class="fuente-cuerpo">320 kcal</td>
+                        <td class="fuente-cuerpo">10g</td>
+                        <td class="fuente-cuerpo">35g</td>
+                        <td class="fuente-cuerpo">12g</td>
+                        <td class="fuente-cuerpo">9g</td>
+                    </tr>
+                    <tr>
+                        <td class="fuente-cuerpo">Smoothie Bowl Tropical</td>
+                        <td class="fuente-cuerpo">290 kcal</td>
+                        <td class="fuente-cuerpo">8g</td>
+                        <td class="fuente-cuerpo">45g</td>
+                        <td class="fuente-cuerpo">9g</td>
+                        <td class="fuente-cuerpo">7g</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <p class="nota-tabla fuente-cuerpo">* Los valores pueden variar ligeramente según la preparación. Consulta con nuestro personal para información más detallada sobre alérgenos e ingredientes específicos.</p>
+
+        <button class="boton-descarga fuente-titulo">Descargar menú completo con información nutricional</button>
+    </section>
+
+    <section id="pasos-alimentacion-saludable">
+        <h2 class="fuente-titulo">5 Pasos para una Alimentación Vegana Saludable</h2>
+        <div class="divisor"></div>
+        <p class="fuente-cuerpo">En GreenPlate no solo ofrecemos deliciosos platillos veganos, también queremos compartir contigo cómo mantener una alimentación vegana equilibrada y nutritiva. Sigue estos pasos para obtener todos los beneficios de una dieta basada en plantas.</p>
+
+        <div class="pasos-contenido-contenedor">
+            <div class="pasos-lista-contenedor">
+                <ol class="pasos-lista">
+                    <li class="paso-item">
+                        <span class="paso-numero fuente-titulo">1</span>
+                        <div class="paso-descripcion">
+                            <h3 class="fuente-titulo">Diversifica tus fuentes de proteína</h3>
+                            <p class="fuente-cuerpo">Incluye legumbres (frijoles, lentejas, garbanzos), tofu, tempeh, seitán y productos derivados de la soya. Combina diferentes fuentes para obtener todos los aminoácidos esenciales.</p>
+                        </div>
+                    </li>
+                    <li class="paso-item">
+                        <span class="paso-numero fuente-titulo">2</span>
+                        <div class="paso-descripcion">
+                            <h3 class="fuente-titulo">Asegura tu ingesta de vitamina B12</h3>
+                            <p class="fuente-cuerpo">Consume alimentos fortificados con B12 como leches vegetales, cereales o levadura nutricional. Considera suplementos si es necesario, ya que esta vitamina es esencial y difícil de obtener en dietas veganas.</p>
+                        </div>
+                    </li>
+                    <li class="paso-item">
+                        <span class="paso-numero fuente-titulo">3</span>
+                        <div class="paso-descripcion">
+                            <h3 class="fuente-titulo">Incorpora grasas saludables</h3>
+                            <p class="fuente-cuerpo">Añade a tu dieta aguacates, nueces, semillas (chía, lino, cáñamo) y aceites de calidad como el de oliva. Estos alimentos aportan ácidos grasos esenciales y ayudan a la absorción de vitaminas liposolubles.</p>
+                        </div>
+                    </li>
+                    <li class="paso-item">
+                        <span class="paso-numero fuente-titulo">4</span>
+                        <div class="paso-descripcion">
+                            <h3 class="fuente-titulo">Planifica comidas balanceadas</h3>
+                            <p class="fuente-cuerpo">Estructura tus platos incluyendo proteínas vegetales, carbohidratos complejos, grasas saludables y abundantes vegetales. Un plato equilibrado debe tener colores variados y diferentes grupos de alimentos.</p>
+                        </div>
+                    </li>
+                    <li class="paso-item">
+                        <span class="paso-numero fuente-titulo">5</span>
+                        <div class="paso-descripcion">
+                            <h3 class="fuente-titulo">Prioriza alimentos integrales</h3>
+                            <p class="fuente-cuerpo">Elige alimentos mínimamente procesados y en su forma más natural posible. Los vegetales, frutas, granos enteros y legumbres deben formar la base de tu alimentación, limitando los productos ultraprocesados aunque sean veganos.</p>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+            <img src="./images/alimentos.webp" alt="Fuentes de proteína vegetal" class="pasos-imagen">
+        </div>
+
+        <button class="boton-guia fuente-titulo">Descarga nuestra guía completa</button>
+    </section>
+
+    <section id="sobre-nosotros">
+        <div id="sobre-nosotros-descripcion">
+            <h2 class="fuente-titulo">Sobre Nosotros</h2>
+            <div class="divisor"></div> 
+            <p class="fuente-cuerpo">En GreenPlate, nos apasiona ofrecer comida vegana deliciosa y nutritiva. Creemos que comer a base de plantas puede ser una experiencia culinaria emocionante y satisfactoria. Utilizamos ingredientes frescos y locales para crear platillos innovadores que deleitan tanto a veganos como a no veganos.</p>
+        </div>
+        <img src="./images/sobre-nosotros.webp" alt="Equipo de GreenPlate colaborando en una reunión" id="sobre-nosotros-imagen">
+    </section>
+
+    <section id="video-promocional">
+        <div id="video-contenido">
+            <div class="contenedor-video">
+                <iframe 
+                    src="https://www.youtube.com/embed/rbFyIqqDkhE" 
+                    title="Video promocional de GreenPlate" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <div id="video-descripcion">
+                <h2 class="fuente-titulo">Descubre Nuestra Pasión</h2>
+                <div class="divisor"></div> 
+                <p class="fuente-cuerpo">Mira cómo preparamos nuestros deliciosos platillos veganos con ingredientes frescos y mucho amor. ¡Una probadita de la experiencia GreenPlate!</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="estadisticas">
+        <div class="estadistica">
+            <h1 class="fuente-titulo">24+</h1>
+            <p class="fuente-cuerpo">100+ GreenPlate en todo el país</p>
+        </div>
+        <div class="estadistica">
+            <h1 class="fuente-titulo">10M</h1>
+            <p class="fuente-cuerpo">Más de 10 millones de platos veganos servidos</p>
+        </div>
+        <div class="estadistica">
+            <h1 class="fuente-titulo">+98</h1>
+            <p class="fuente-cuerpo">+98% de satisfacción de nuestros clientes</p>
+        </div>
+    </section>
+
+    <section id="resenas">
+        <h3 class="fuente-titulo">Lo que dicen nuestros clientes</h3>
+        <div class="divisor"></div> 
+        <div id="resenas-contenedor">
+            <div class="resena">
+                <img src="./images/foto-perfil1.webp" alt="Foto de perfil de Danna Barrón" class="foto-perfil">
+                <div class="resena-contenedor">
+                    <div class="estrellas">
+                        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                    </div>
+                    <p class="fuente-cuerpo">¡La Hamburguesa Vegana Clásica es espectacular! Sabor increíble y fresco. Volveré.</p>
+                    <h3 class="fuente-titulo">Danna Barrón</h3>
+                </div>
+            </div>
+            <div class="resena">
+                <img src="./images/foto-perfil2.webp" alt="Foto de perfil de Jorge Sandoval" class="foto-perfil">
+                <div class="resena-contenedor">
+                    <div class="estrellas">
+                        <span>★</span><span>★</span><span>★</span><span>★</span><span>☆</span>
+                    </div>
+                    <p class="fuente-cuerpo">Tacos Veganos al Pastor maravillosos. Sabor auténtico y combinación perfecta. ¡Recomendados!</p>
+                    <h3 class="fuente-titulo">Jorge Sandoval</h3>
+                </div>
+            </div>
+            <div class="resena">
+                <img src="./images/foto-perfil3.webp" alt="Foto de perfil de Elizabeth Castillo" class="foto-perfil">
+                <div class="resena-contenedor">
+                    <div class="estrellas">
+                        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                    </div>
+                    <p class="fuente-cuerpo">Smoothie Bowl Tropical refrescante y delicioso. Ambiente agradable y excelente servicio. ¡Gran opción!</p>
+                    <h3 class="fuente-titulo">Elizabeth Castillo</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contacto">
+        <h2 class="fuente-titulo">Contáctanos</h2>
+        <div class="divisor"></div>
+        <p class="fuente-cuerpo">¿Tienes alguna pregunta, comentario o sugerencia? ¡Nos encantaría escucharte! Completa el formulario a continuación y nos pondremos en contacto contigo lo antes posible.</p>
+
+        <form id="formulario-contacto">
+            <div class="form-columnas-contenedor"> 
+                <div class="form-columna-izquierda"> 
+                    <div class="form-grupo">
+                        <label for="nombre" class="fuente-titulo">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" required class="fuente-cuerpo" placeholder="Tu nombre completo">
+                    </div>
+
+                    <div class="form-grupo">
+                        <label for="correo" class="fuente-titulo">Correo electrónico:</label>
+                        <input type="email" id="correo" name="correo" required class="fuente-cuerpo" placeholder="tu.correo@ejemplo.com">
+                    </div>
+
+                    <div class="form-grupo">
+                        <label for="telefono" class="fuente-titulo">Teléfono (Opcional):</label>
+                        <input type="tel" id="telefono" name="telefono" class="fuente-cuerpo" placeholder="Tu número de teléfono">
+                    </div>
+
+                    <div class="form-grupo">
+                        <label for="asunto" class="fuente-titulo">Asunto:</label>
+                        <input type="text" id="asunto" name="asunto" required class="fuente-cuerpo" placeholder="Motivo de tu contacto">
+                    </div>
+                </div> 
+
+                <div class="form-columna-derecha"> 
+                    <div class="form-grupo form-grupo-mensaje"> 
+                        <label for="mensaje" class="fuente-titulo">Mensaje:</label>
+                        <textarea id="mensaje" name="mensaje" rows="5" required class="fuente-cuerpo" placeholder="Escribe tu mensaje aquí..."></textarea>
+                    </div>
+                </div>
+            </div> 
+
+            <button type="submit" class="fuente-titulo">Enviar Mensaje</button>
+            <div id="mensaje-respuesta-contacto" class="fuente-cuerpo"></div>
+        </form>
+    </section>
+
+    <section id="mapa">
+        <h2 class="fuente-titulo">Encuéntranos</h2>
+        <div class="divisor"></div>
+        <p class="fuente-cuerpo">Visítanos en nuestra ubicación o contáctanos para más información. Estamos listos para atenderte y ofrecerte la mejor experiencia vegana.</p>
+        <div class="mapa-info-contenedor">
+            <iframe class="mapa-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.095994528073!2d-0.12000902355754115!3d51.5296923090667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761b3c93868549%3A0x196721784a18a8ac!2sStreet%20Kitchen!5e0!3m2!1ses-419!2smx!4v1716074334846!5m2!1ses-419!2smx" width="600" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="info-contacto-mapa">
+                <h3 class="fuente-titulo">Información de Contacto</h3>
+                <p class="fuente-cuerpo"><svg class="info-contacto-icono" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24px" height="24px"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg> Blvd. Agua Caliente 9876, Col. Aviación, Tijuana, B.C.</p>
+                <p class="fuente-cuerpo"><svg class="info-contacto-icono" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24px" height="24px"><path d="M0 0h24v24H0z" fill="none"/><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg> Teléfono: +52 (664) 123-4567</p>
+                <p class="fuente-cuerpo"><svg class="info-contacto-icono" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24px" height="24px"><path d="M0 0h24v24H0z" fill="none"/><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg> Correo: <a href="mailto:contacto@greenplate.com">contacto@greenplate.com</a></p>
+                <h3 class="fuente-titulo">Horario</h3>
+                <p class="fuente-cuerpo">Lunes a Viernes: 11:00 AM - 10:00 PM</p>
+                <p class="fuente-cuerpo">Sábado y Domingo: 10:00 AM - 11:00 PM</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div id="footer-contenido-principal">
+            <div id="logo-footer">
+                <img src="./images/logotipo.webp" alt="Logotipo de GreenPlate" id="logo-footer-img">
+                <button class="fuente-titulo">Haz tu pedido</button>
+            </div>
+
+            <div id="footer-contenedor-enlaces">
+                <div id="greenplate-footer">
+                    <h2 class="fuente-titulo">GreenPlate</h2>
+                    <div class="divisor-footer"></div>
+                    <ul>
+                        <li><a href="#contacto" class="fuente-cuerpo">¡Haz tu pedido ahora!</a></li>
+                        <li><a href="#platillos-destacados" class="fuente-cuerpo">Explora nuestro menú</a></li>
+                        <li><a href="#contacto" class="fuente-cuerpo">Contáctanos</a></li>
+                        <li><a href="#barra-inferior-footer" class="fuente-cuerpo">Síguenos en redes sociales</a></li>
+                    </ul>
+                </div>
+
+                <div id="informacion-footer">
+                    <h2 class="fuente-titulo">Información</h2>
+                    <div class="divisor-footer"></div>
+                    <ul>
+                        <li><a href="#sobre-nosotros" class="fuente-cuerpo">Sobre nosotros</a></li>
+                        <li><a href="#platillos-destacados" class="fuente-cuerpo">Menú</a></li>
+                        <li><a href="#" class="fuente-cuerpo">Política de privacidad</a></li>
+                        <li><a href="#" class="fuente-cuerpo">Términos y condiciones</a></li>
+                    </ul>
+                </div>
+
+                <div id="contacto-footer">
+                    <h2 class="fuente-titulo">Contacto</h2>
+                    <div class="divisor-footer"></div>
+                    <ul>
+                        <li><a href="mailto:contacto@greenplate.com" class="fuente-cuerpo">Correo electrónico: contacto@greenplate.com</a></li>
+                        <li><a href="tel:+526641234567" class="fuente-cuerpo">Teléfono: +52 (664) 123-4567</a></li>
+                        <li><a href="#contacto" class="fuente-cuerpo">Blvd. Agua Caliente 9876, Col. Aviación, Tijuana, B.C.</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="barra-inferior-footer">
+            <div id="redes-sociales-footer">
+                <a href="https://www.facebook.com/" target="_blank"><img src="./images/facebook-logo.webp" alt="Facebook Logo"></a>
+                <a href="https://www.instagram.com/" target="_blank"><img src="./images/instagram-logo.webp" alt="Instagram Logo"></a>
+            </div>
+
+            <div id="derechos-footer">
+                <p class="fuente-cuerpo">&copy; 2024 GreenPlate. Todos los derechos reservados.</p>
+            </div>
+
+            <div id="desarrollador-footer">
+                <p class="fuente-cuerpo">Diseñado por Rafael Ibarra</p>
+            </div>
+        </div>
+    </footer>
+    <script src="./js/menu.js" defer></script>
+    <script src="./js/contacto.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - GreenPlate Admin</title>
+    <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/login.css">
+</head>
+<body>
+    <div class="login-container">
+        <img src="./images/logotipo.webp" alt="Logotipo GreenPlate" id="logotipo">
+        <h2 class="fuente-titulo">Iniciar Sesión - Admin</h2>
+        <form id="formulario-login">
+            <div class="form-grupo">
+                <label for="nombre_usuario" class="fuente-titulo">Usuario:</label>
+                <input type="text" id="nombre_usuario" name="nombre_usuario" required>
+            </div>
+            <div class="form-grupo">
+                <label for="password" class="fuente-titulo">Contraseña:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit" class="fuente-titulo">Ingresar</button>
+            <div id="mensaje-login" class="mensaje-login"></div>
+        </form>
+        <a href="index.html" class="back-to-home fuente-cuerpo">Volver a la página principal</a>
+    </div>
+
+    <script src="./js/login.js" defer></script>
+</body>
+</html> 

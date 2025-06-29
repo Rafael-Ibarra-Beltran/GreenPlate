@@ -1,0 +1,1354 @@
+/* Se importan las fuentes Lora y Montserrat desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.fuente-titulo {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.fuente-cuerpo {
+    font-family: 'Lora', serif;
+}
+
+body {
+    color: #334155; 
+    line-height: 1.5;
+    font-family: 'Lora', serif; 
+}
+
+/* Header */
+header {
+    background-color: #d1fae5; 
+    display: flex;
+    width: 100%;
+    height: 80px;
+    justify-content: space-between; /* Pone espacio entre el logo y el menú, mandando cada uno a un extremo */
+    align-items: center;
+    padding-left: 350px;
+    padding-right: 350px;
+    position: sticky; /* Deja el header pegado arriba al hacer scroll */
+    top: 0;
+    z-index: 1000; /* Asegura que el header esté por encima de otros elementos al hacer scroll */
+    border-bottom: 1px solid #a7f3d0; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); 
+}
+
+#logotipo {
+    display: flex;
+    align-items: center;
+}
+
+#logotipo img {
+    width: 50px;
+    height: 50px;
+    margin-right: 8px;
+}
+
+#logotipo h1 {
+    font-family: 'Montserrat', sans-serif; 
+    font-size: 28px;
+    align-self: center;
+    color: #334155; 
+    font-weight: 700; 
+}
+
+#menu {
+    display: flex;
+    font-family: 'Montserrat', sans-serif; 
+    font-size: 16px;
+    font-weight: 500; 
+}
+
+#menu ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 25px;
+}
+
+#menu ul li a {
+    text-decoration: none;
+    color: #334155; 
+    font-weight: 500; 
+    transition: color 0.3s ease; /* Suaviza el cambio de color al pasar el mouse */
+}
+
+#menu ul li a:hover {
+    color: #10b981; 
+}
+
+#menu ul li a.boton-contacto {
+    background-color: #10b981; 
+    color: #ffffff; 
+    padding: 6px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Suaviza el cambio de fondo y color al pasar el mouse */
+    font-weight: 600; 
+}
+
+#menu ul li a.boton-contacto:hover {
+    background-color: #047857; 
+}
+
+/* Menú Modo Móvil */
+.menu-toggle-checkbox {
+    display: none;
+}
+
+.menu-toggle-label {
+    display: none;
+    cursor: pointer;
+    padding: 10px;
+    position: relative;
+    z-index: 1001;
+}
+
+.menu-toggle-label span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #334155;
+    margin: 5px 0;
+    transition: background-color 0.3s ease;
+}
+
+/* Hero */
+#hero {
+    display: flex;
+    flex-direction: row;
+    gap: 48px;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 32px;
+}
+
+#hero-imagen {
+    height: 350px;
+    max-width: 50%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+#hero #hero-descripcion {
+    width: 550px;
+}
+
+#hero h1 {
+    margin-top: 8px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40px;
+    color: #047857;
+    font-weight: 800;
+}
+
+#hero h3 {
+    font-family: 'Montserrat', sans-serif; 
+    font-size: 20px;
+    color: #f59e0b; 
+    font-weight: 700; 
+}
+
+#hero p {
+    margin-top: 8px;
+    font-family: 'Lora', serif; 
+    font-size: 16px;
+    color: #334155; 
+    font-weight: 400; 
+}
+
+/* Divisor */
+.divisor {
+    width: 60px;
+    height: 3px;
+    background-color: #f59e0b;
+    margin-bottom: 15px; 
+}
+
+/* Platillos Destacados */
+#platillos-destacados {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 60px;
+    padding: 40px 350px;
+    width: 100%;
+    height: auto;
+    gap: 8px; 
+    background-color: #F4F7F4; 
+}
+
+#platillos-destacados h2 { 
+    font-family: 'Montserrat', sans-serif; 
+    font-size: 28px;
+    color: #047857; 
+    font-weight: 700; 
+    margin-bottom: 8px; 
+}
+
+#platillos-destacados p {
+    font-family: 'Lora', serif; 
+    font-size: 16px;
+    color: #334155; 
+    text-align: center;
+    font-weight: 400; 
+}
+
+#platillos-columnas-contenedor {
+    display: flex;
+    justify-content: space-between;
+    gap: 6px; /* Reducido el espacio entre columnas */
+    width: 100%;
+    margin-top: 15px;
+    padding: 0; 
+}
+
+#platillos-columna-izquierda,
+#platillos-columna-derecha {
+    flex: 1; /* Hace que las columnas crezcan igual y ocupen el espacio disponible */
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.platillo {
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 28px 28px 20px 28px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.10);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    width: 100%;
+    max-width: 540px; /* Más ancho */
+    margin: 0 auto 18px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border: 1.5px solid #e2e8f0;
+}
+
+.platillo:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.platillo h3 {
+    font-family: 'Montserrat', sans-serif; 
+    font-size: 24px;
+    color: #f59e0b; 
+    font-weight: 700; 
+    margin: 0 0 8px 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.platillo-descripcion {
+    max-width: 100%;
+    word-break: break-word;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    line-height: 1.5;
+    font-size: 17px;
+    color: #334155;
+    margin-bottom: 12px;
+}
+
+.precio-platillo-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+}
+
+.precio-platillo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 26px;
+    color: #047857;
+    font-weight: 900;
+    margin: 0 0 0 0;
+    background: #e6fffa; /* Color sólido */
+    padding: 10px 24px;
+    border-radius: 10px;
+    display: inline-block;
+    box-shadow: 0 2px 8px rgba(16,185,129,0.08);
+    border: 2px solid #10b98133;
+    letter-spacing: 1px;
+}
+
+#platillos-destacados .platillo p {
+    font-family: 'Lora', serif; 
+    font-size: 16px;
+    color: #334155; 
+    text-align: left;
+    margin: 8px 0;
+    font-weight: 400; 
+}
+
+.platillo-imagen {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+    border-radius: 10px;
+    margin-bottom: 0;
+    margin-top: 8px;
+}
+
+/* Información Nutricional */
+#informacion-nutricional {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 350px;
+    width: 100%;
+    gap: 15px;
+    background-color: #fff; 
+}
+
+#informacion-nutricional h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 28px;
+    color: #047857;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+#informacion-nutricional > p {
+    font-family: 'Lora', serif;
+    font-size: 16px;
+    color: #334155;
+    text-align: center;
+    max-width: 800px; 
+    margin-bottom: 15px; 
+    font-weight: 400;
+}
+
+.contenedor-tabla-nutricional {
+    width: 100%;
+    max-width: 900px; 
+    overflow-x: auto; /* Se añade scroll horizontal si la tabla no cabe en pantallas pequeñas */
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #e2e8f0; 
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+#informacion-nutricional table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff; 
+}
+
+#informacion-nutricional th, 
+#informacion-nutricional td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #e2e8f0; 
+}
+
+#informacion-nutricional th {
+    background-color: #047857; 
+    color: #FFFFFF; 
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+#informacion-nutricional tbody tr {
+    background-color: #FFFFFF; 
+    transition: background-color 0.2s ease; /* Suaviza el cambio de color de fondo al pasar el mouse por la fila */
+}
+
+#informacion-nutricional tbody tr:hover {
+    background-color: #F4F7F4; 
+}
+
+#informacion-nutricional td {
+    font-size: 14px;
+    color: #334155;
+}
+
+.nota-tabla {
+    font-size: 12px !important; 
+    color: #64748b !important; 
+    max-width: 800px;
+    text-align: center;
+    margin-top: 10px;
+    font-style: italic;
+}
+
+.boton-descarga {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    color: #FFFFFF; 
+    background-color: #059669; 
+    border: none;
+    padding: 10px 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Se suaviza el cambio de color del botón al pasar el mouse */
+    margin-top: 15px;
+    font-weight: 500;
+}
+
+.boton-descarga:hover {
+    background-color: #047857; 
+}
+
+/* Pasos Alimentación Saludable */
+#pasos-alimentacion-saludable {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 350px;
+    width: 100%;
+    gap: 25px;
+    background-color: #F4F7F4; 
+}
+
+#pasos-alimentacion-saludable h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 28px;
+    color: #047857;
+    font-weight: 700;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+#pasos-alimentacion-saludable > p {
+    font-family: 'Lora', serif;
+    font-size: 16px;
+    color: #334155;
+    text-align: center;
+    max-width: 800px; 
+    margin-bottom: 15px; 
+    font-weight: 400;
+}
+
+.pasos-contenido-contenedor {
+    display: flex;
+    justify-content: space-between; /* Pone espacio entre la lista de pasos y la imagen */
+    align-items: flex-start; /* Se alinea la lista y la imagen arriba */
+    gap: 40px;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.pasos-lista-contenedor {
+    flex: 1.5; /* Hace que la lista de pasos ocupe 1.5 veces más espacio que la imagen */
+}
+
+.pasos-lista {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.paso-item {
+    display: flex;
+    align-items: flex-start; /* Alinea el número y la descripción arriba */
+    gap: 15px;
+}
+
+.paso-numero {
+    display: inline-flex; /* Nos permite usar flexbox pero se comporta como elemento inline */
+    align-items: center;
+    justify-content: center;
+    min-width: 32px;
+    height: 32px;
+    background-color: #f59e0b;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 50%;
+    padding: 5px;
+    flex-shrink: 0; 
+}
+
+.paso-descripcion {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.paso-descripcion h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    color: #047857;
+    font-weight: 600;
+    margin: 0;
+}
+
+.paso-descripcion p {
+    font-family: 'Lora', serif;
+    font-size: 14px;
+    color: #334155;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.pasos-imagen {
+    flex: 1; /* Hace que la imagen ocupe el espacio restante */
+    width: 40%; 
+    max-width: 400px; 
+    height: auto;
+    object-fit: cover; /* Hace que la imagen de los pasos cubra su espacio sin deformarse */
+    border-radius: 8px;
+    align-self: center; /* Se sentra la imagen verticalmente dentro del contenedor flex */
+}
+
+.boton-guia {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    color: #FFFFFF; 
+    background-color: #059669; 
+    border: none;
+    padding: 10px 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Suaviza el cambio de color del botón al pasar el mouse */
+    margin-top: 15px;
+    font-weight: 500;
+}
+
+.boton-guia:hover {
+    background-color: #047857; 
+}
+
+/* Sobre Nosotros */
+#sobre-nosotros {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    margin-top: 60px;
+    padding: 40px 350px;
+    width: 100%;
+    height: auto;
+    background-color: #fff; 
+}
+
+#sobre-nosotros-descripcion {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#sobre-nosotros-descripcion h2 {
+    font-family: 'Montserrat', sans-serif; 
+    font-size: 28px;
+    color: #047857; 
+    font-weight: 700; 
+    margin-bottom: 8px; 
+}
+
+#sobre-nosotros-descripcion p {
+    font-family: 'Lora', serif; 
+    font-size: 16px;
+    color: #334155; 
+    text-align: left;
+    font-weight: 400; 
+}
+
+#sobre-nosotros-imagen {
+    width: 50%;
+    max-width: 50%;
+    height: 340px;
+    object-fit: cover; /* Hace que la imagen de "Sobre Nosotros" cubra su espacio sin deformarse */
+    border-radius: 15px;
+}
+
+/* Video Promocional */
+#video-promocional {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    margin-top: 60px;
+    padding: 50px 350px;
+    width: 100%;
+    gap: 30px; 
+    background-color: #F4F7F4; 
+}
+
+#video-contenido {
+    display: flex;
+    align-items: center; 
+    gap: 30px; 
+    width: 100%; 
+    max-width: 1200px; 
+}
+
+#video-descripcion {
+    flex: 1; /* Hace que la descripción del video ocupe el espacio disponible */
+    max-width: 45%; 
+    text-align: left; 
+    display: flex; 
+    flex-direction: column; 
+    gap: 8px; 
+}
+
+#video-promocional h2 {
+    font-family: 'Montserrat', sans-serif; 
+    font-size: 28px;
+    color: #047857; 
+    font-weight: 700; 
+    margin-bottom: 0; 
+}
+
+#video-promocional p {
+    font-family: 'Lora', serif; 
+    font-size: 16px;
+    color: #334155; 
+    margin-bottom: 0; 
+    font-weight: 400; 
+}
+
+.contenedor-video {
+    flex: 1.2; /* Hace que el video ocupe un poco más de espacio (1.2 veces) que la descripción */
+    position: relative; /* Base para posicionar el iframe absolutamente dentro */
+    padding-bottom: 40%; /* Truco para mantener la proporción del video (aspect ratio) */
+    height: 0;
+    overflow: hidden;
+    width: 100%; 
+    background-color: #000; 
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contenedor-video iframe {
+    position: absolute; /* Posiciona el video para que llene el contenedor-video */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Estadísticas */
+#estadisticas {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0; 
+    padding: 50px 350px;
+    background-color: #10b981; 
+    width: 100%;
+    height: auto;
+}
+
+.estadistica {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: flex-start; /* Alinea el texto de la estadística a la izquierda */
+    gap: 8px;
+    background-color: #ffffff; 
+    padding: 20px; 
+    width: 340px; 
+    height: 130px; 
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.estadistica h1 {
+    font-family: 'Montserrat', sans-serif; 
+    font-size: 32px;
+    color: #f59e0b; 
+    font-weight: 800; 
+    margin: 0; 
+}
+
+.estadistica p {
+    font-family: 'Lora', serif; 
+    font-size: 16px;
+    color: #334155; 
+    text-align: left; 
+    font-weight: 400; 
+    margin: 0; 
+}
+
+/* Reseñas */
+#resenas {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0; 
+    padding: 50px 350px;
+    width: 100%;
+    height: auto;
+    gap: 25px;
+    background-color: #fff; 
+}
+
+#resenas > h3 {
+    font-family: 'Montserrat', sans-serif; 
+    font-size: 28px;
+    color: #047857; 
+    font-weight: 700; 
+    margin-bottom: 8px; 
+}
+
+#resenas-contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: stretch; /* Hace que todas las tarjetas de reseña tengan la misma altura */
+    gap: 20px;
+    flex-wrap: wrap; /* Permite que las reseñas se acomoden en varias líneas si no caben */
+}
+
+.resena {
+    display: flex;
+    align-items: flex-start; /* Alinea la foto y el texto de la reseña arriba */
+    gap: 12px;
+    background-color: #ffffff; 
+    width: 320px;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e2e8f0; 
+}
+
+.resena-contenedor {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Alinea el contenido de la reseña (estrellas, texto, nombre) arriba */
+    gap: 6px;
+}
+
+.foto-perfil {
+    width: 50px; 
+    height: 50px; 
+    border-radius: 50%;
+    object-fit: cover; /* Hace que la foto de perfil cubra su círculo sin deformarse */
+    flex-shrink: 0;
+}
+
+.estrellas {
+    color: #f59e0b; 
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+
+.resena p {
+    font-family: 'Lora', serif; 
+    font-size: 14px;
+    color: #64748b; 
+    line-height: 1.5;
+    margin: 0;
+    text-align: left;
+    font-weight: 400; 
+}
+
+.resena-contenedor h3 {
+    font-family: 'Montserrat', sans-serif; 
+    font-size: 16px;
+    color: #047857; 
+    font-weight: 600; 
+    margin-top: 4px;
+}
+
+/* Contacto */
+#contacto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0; 
+    padding: 60px 350px; 
+    background-color: #F4F7F4; 
+    width: 100%;
+    gap: 15px;
+    border-top: 1px solid #e2e8f0; 
+    border-bottom: 1px solid #e2e8f0; 
+}
+
+#contacto h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 28px;
+    color: #047857;
+    font-weight: 700;
+    margin-bottom: 8px; 
+}
+
+#contacto > p {
+    font-family: 'Lora', serif;
+    font-size: 16px;
+    color: #334155;
+    text-align: center;
+    max-width: 600px; 
+    margin-bottom: 30px; 
+    font-weight: 400;
+}
+
+#contacto form {
+    display: flex;
+    flex-direction: column; 
+    width: 100%;
+    max-width: 800px; 
+    gap: 20px; 
+    background-color: #fff;
+    padding: 30px; 
+    border-radius: 8px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); 
+}
+
+.form-columnas-contenedor {
+    display: flex;
+    gap: 25px; 
+    width: 100%;
+}
+
+.form-columna-izquierda,
+.form-columna-derecha {
+    flex: 1; /* Hace que las columnas del formulario crezcan igual */
+    display: flex;
+    flex-direction: column;
+    gap: 18px; 
+}
+
+.form-grupo {
+    display: flex;
+    flex-direction: column;
+    gap: 6px; 
+}
+
+.form-grupo-mensaje {
+    flex-grow: 1; /* Hace que el área del mensaje ocupe el espacio vertical restante en su columna */
+    display: flex; 
+    flex-direction: column;
+}
+
+#contacto textarea {
+    resize: vertical; /* Permite al usuario cambiar solo la altura del textarea */
+    min-height: 150px; 
+    flex-grow: 1; /* Hace que el textarea crezca para llenar el espacio del form-grupo-mensaje */
+    height: 100%; 
+}
+
+#contacto label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    color: #1e293b; 
+    font-weight: 600; 
+}
+
+#contacto input[type="text"],
+#contacto input[type="email"],
+#contacto input[type="tel"], 
+#contacto textarea {
+    font-family: 'Lora', serif;
+    font-size: 14px;
+    padding: 10px 14px; 
+    border: 1px solid #cbd5e1; 
+    border-radius: 5px; 
+    width: 100%;
+    color: #334155;
+    font-weight: 400;
+    background-color: #ffffff; 
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Suaviza el cambio de borde y sombra al enfocar */
+}
+
+#contacto input[type="text"]:focus,
+#contacto input[type="email"]:focus,
+#contacto input[type="tel"]:focus,
+#contacto textarea:focus {
+    outline: none;
+    border-color: #10b981; 
+    box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.2); 
+}
+
+#contacto button[type="submit"] {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #f59e0b;
+    border: none;
+    padding: 12px 20px; 
+    border-radius: 5px; 
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Suaviza el cambio de color y la pequeña subida al pasar el mouse */
+    align-self: center; /* Centra el botón horizontalmente en el formulario */
+    margin-top: 15px; 
+    font-weight: 600;
+}
+
+#contacto button[type="submit"]:hover {
+    background-color: #047857; 
+}
+
+/* Estilos para mensajes de respuesta del formulario de contacto */
+#mensaje-respuesta-contacto.exito {
+    color: #10b981; /* Verde para mensajes de éxito */
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #a7f3d0;
+    border-radius: 5px;
+    background-color: #e6f9f0;
+}
+
+#mensaje-respuesta-contacto.error {
+    color: #ef4444; /* Rojo para mensajes de error */
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #fecaca;
+    border-radius: 5px;
+    background-color: #ffeeee;
+}
+
+/* Mapa / Encuéntranos */
+#mapa {
+    display: flex; /* Para centrar el contenido principal (título, divisor, párrafo) */
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 350px; /* Padding general de las secciones */
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+#mapa h2 { /* Aseguramos que el título tenga el mismo estilo que otras secciones */
+    font-family: 'Montserrat', sans-serif; 
+    font-size: 28px;
+    color: #047857; 
+    font-weight: 700; 
+    margin-bottom: 8px; 
+}
+
+/* El divisor ya tiene una clase global .divisor, nos aseguramos que el margen inferior sea consistente aquí también si es necesario */
+#mapa .divisor {
+    margin-bottom: 15px; 
+}
+
+#mapa > p { /* Estilo para el párrafo introductorio de la sección */
+    font-family: 'Lora', serif; 
+    font-size: 16px;
+    color: #334155; 
+    text-align: center;
+    font-weight: 400; 
+    max-width: 800px; /* Para que no sea demasiado ancho en pantallas grandes */
+    margin-bottom: 30px; /* Espacio antes del contenedor del mapa e info */
+}
+
+.mapa-info-contenedor {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
+    align-items: flex-start; 
+    gap: 30px; 
+    width: 100%; /* Ocupa el ancho del padding de #mapa */
+}
+
+.mapa-iframe {
+    border: 0;
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    width: 100%; /* Hacemos que el iframe sea responsive dentro de su contenedor flex */
+    max-width: 600px; /* Un máximo para que no se haga excesivamente grande */
+    height: 400px; /* Altura ajustada */
+    flex: 1 1 500px; 
+}
+
+.info-contacto-mapa {
+    text-align: left; 
+    padding: 25px; /* Padding interno del cuadro de info */
+    background-color: #ffffff; 
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1 1 320px; /* Ajuste de flex-basis */
+    max-width: 450px; /* Máximo ancho para la info de contacto */
+}
+
+.info-contacto-mapa h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px; /* Tamaño de los subtítulos */
+    color: #2E7D32; 
+    margin-top: 20px; 
+    margin-bottom: 15px; /* Más espacio debajo de los subtítulos */
+}
+
+.info-contacto-mapa h3:first-child {
+    margin-top: 0; 
+}
+
+.info-contacto-mapa p {
+    font-family: 'Lora', serif;
+    font-size: 16px; /* Tamaño de texto consistente */
+    margin-bottom: 12px; /* Espacio entre párrafos de contacto */
+    line-height: 1.7; /* Mejor legibilidad */
+    display: flex; 
+    align-items: center; 
+    color: #334155;
+}
+
+.info-contacto-mapa a {
+    color: #10b981; /* Verde de enlaces consistentes */
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.info-contacto-mapa a:hover {
+    text-decoration: underline;
+}
+
+.info-contacto-icono {
+    width: 22px; 
+    height: 22px; 
+    margin-right: 12px; 
+    fill: currentColor; /* Hereda el color del texto padre (p) */
+    flex-shrink: 0; /* Evita que el icono se encoja */
+}
+
+/* Footer */
+footer {
+    background-color: #1e293b; 
+    color: #f8fafc; 
+    padding: 50px 350px 20px 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch; /* Estira los hijos directos (contenido y barra inferior) para que ocupen todo el ancho */
+    gap: 35px;
+    margin-top: 0; 
+    font-family: 'Montserrat', sans-serif; 
+}
+
+#footer-contenido-principal {
+    display: flex;
+    justify-content: flex-start; /* Alinea el logo y los enlaces a la izquierda */
+    align-items: flex-start; /* Alinea el logo y los enlaces arriba */
+    gap: 80px;
+    width: 100%;
+    flex-wrap: wrap; /* Permite que las secciones del footer se acomoden en varias líneas si estos no caben */
+}
+
+#logo-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#greenplate-footer,
+#informacion-footer,
+#contacto-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#footer-contenedor-enlaces {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap; /* Permite que las columnas de enlaces se acomoden en varias líneas si estos no caben */
+}
+
+footer h2 {
+    font-family: 'Montserrat', sans-serif; 
+    font-size: 18px;
+    color: #f59e0b; 
+    margin-bottom: 4px;
+    font-weight: 600; 
+}
+
+.divisor-footer {
+    width: 40px;
+    height: 2px;
+    background-color: #10b981; 
+    margin-bottom: 8px;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+footer ul li a {
+    font-family: 'Lora', serif; 
+    color: #e6ede6; 
+    text-decoration: none;
+    font-size: 13px;
+    transition: color 0.3s ease; /* Suaviza el cambio de color del enlace al pasar el mouse */
+    font-weight: 400; 
+}
+
+footer ul li a:hover {
+    color: #f59e0b;
+}
+
+#logo-footer img {
+    width: 64px;
+    height: auto;
+    margin-bottom: 12px;
+    border-radius: 4px;
+}
+
+#logo-footer button {
+    font-family: 'Montserrat', sans-serif; 
+    font-size: 14px;
+    color: #ffffff; 
+    background-color: #10b981; 
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Suaviza el cambio de color del botón del footer al pasar el mouse */
+    font-weight: 500; 
+}
+
+#logo-footer button:hover {
+    background-color: #047857; 
+}
+
+#barra-inferior-footer {
+    display: flex;
+    justify-content: space-between; /* Pone espacio entre redes, derechos y desarrollador */
+    align-items: center;
+    border-top: 1px solid #334155; 
+    padding-top: 15px;
+    flex-wrap: wrap; /* Permite que los elementos de la barra inferior se acomoden en varias líneas si no caben */
+    gap: 10px;
+    width: 100%;
+}
+
+#redes-sociales-footer img {
+    width: 28px;
+    height: 28px;
+    margin-left: 8px;
+    cursor: pointer;
+    filter: brightness(0) saturate(100%) invert(93%) sepia(8%) saturate(131%) hue-rotate(169deg) brightness(95%) contrast(89%); /* Pone los logos de redes sociales en color gris claro */
+    transition: filter 0.3s ease; /* Suaviza la transición del filtro al pasar el mouse */
+}
+#redes-sociales-footer img:hover {
+    filter: none; /* Quita el filtro para mostrar el color original del logo al pasar el mouse */
+}
+
+#derechos-footer p,
+#desarrollador-footer p {
+    font-family: 'Lora', serif; 
+    font-size: 12px;
+    color: #64748b; 
+    margin: 0;
+    font-weight: 400; 
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+    header,
+    #platillos-destacados,
+    #informacion-nutricional,
+    #pasos-alimentacion-saludable,
+    #sobre-nosotros,
+    #video-promocional,
+    #estadisticas,
+    #resenas,
+    #contacto,
+    footer,
+    #mapa {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+    #hero {
+        margin-top: 32px;
+        margin-bottom: 32px;
+        padding-left: 0;
+        padding-right: 0;
+        max-width: 1100px;
+        margin-left: auto;
+        margin-right: auto;
+        gap: 48px;
+    }
+    #hero #hero-descripcion {
+        width: 50%;
+        min-width: 320px;
+    }
+    #hero-imagen {
+        max-width: 50%;
+        min-width: 320px;
+    }
+}
+
+@media (max-width: 1024px) {
+    header,
+    #platillos-destacados,
+    #informacion-nutricional,
+    #pasos-alimentacion-saludable,
+    #sobre-nosotros,
+    #video-promocional,
+    #estadisticas,
+    #resenas,
+    #contacto,
+    footer,
+    #mapa {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    #hero {
+        margin-top: 24px;
+        margin-bottom: 24px;
+        padding-left: 0;
+        padding-right: 0;
+        max-width: 900px;
+        margin-left: auto;
+        margin-right: auto;
+        gap: 24px;
+    }
+    #hero #hero-descripcion {
+        width: 52%;
+        min-width: 220px;
+    }
+    #hero-imagen {
+        max-width: 44%;
+        min-width: 180px;
+    }
+}
+
+@media (max-width: 900px) {
+    #hero {
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        max-width: 100vw;
+        gap: 18px;
+        padding: 0 16px;
+    }
+    #hero-imagen {
+        width: 100%;
+        max-width: 400px;
+        min-width: unset;
+        height: auto;
+        margin-bottom: 12px;
+    }
+    #hero #hero-descripcion {
+        width: 100%;
+        min-width: unset;
+        text-align: center;
+    }
+    #hero h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    #hero {
+        padding: 0 8px;
+        gap: 10px;
+    }
+    #hero h1 {
+        font-size: 1.5rem;
+    }
+    #hero-imagen {
+        max-width: 100%;
+        height: auto;
+    }
+    #hero #hero-descripcion {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 0 20px;
+        height: 70px;
+    }
+
+    .menu-toggle-label {
+        display: block;
+    }
+
+    .menu-toggle-label span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background-color: #334155;
+        margin: 5px 0;
+        transition: background-color 0.3s ease;
+    }
+
+    .menu-toggle-checkbox:checked ~ .menu-toggle-label span {
+        background-color: #10b981;
+    }
+
+    #menu {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background-color: #d1fae5;
+        transition: left 0.3s ease;
+        padding: 20px;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .menu-toggle-checkbox:checked ~ #menu {
+        left: 0;
+    }
+
+    #menu ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+        padding-top: 20px;
+    }
+
+    #menu ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    #menu ul li a {
+        display: block;
+        padding: 10px;
+        font-size: 18px;
+    }
+
+    #menu ul li a.boton-contacto {
+        width: 100%;
+        max-width: 200px;
+        margin: 0 auto;
+    }
+}
+
+.platillo h3, 
+.paso-descripcion h3 { 
+    font-size: 18px; }
+
+.precio-platillo {
+    font-size: 20px;
+    padding: 6px 12px;
+}
+
+.platillo-imagen {
+    height: 180px; /* Altura ligeramente menor en móviles */
+}
+
+.estadistica h1 { 
+    font-size: 28px; 
+}
